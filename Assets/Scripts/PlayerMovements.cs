@@ -14,7 +14,8 @@ public class PlayerMovements : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
-        
+        _horizontalDirection = Input.GetAxisRaw("Horizontal");
+
+        _Rb.linearVelocityX = _horizontalDirection * speed;
     }
 }
